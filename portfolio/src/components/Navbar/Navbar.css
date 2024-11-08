@@ -1,0 +1,28 @@
+
+.menu-elements{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.left{
+    display: flex;
+    gap: 40px;
+}
+.open{
+    text-align: right;
+    padding: 1rem 1rem;
+}
+.close{
+    text-align: right;
+}
+.navigation-mobile{
+    padding: 1rem 1rem;
+    height: 100vh;
+}
+.navigation-mobile .left{
+    display: block;
+    text-align: right;
+}
+.navigation-mobile .right{
+    text-align: right;
+}

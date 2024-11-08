@@ -1,0 +1,30 @@
+:root{
+ --violet: #EBE0FF;
+ --pink: #FAACC9;
+}
+
+@font-face {
+  font-family: 'Maharlika';
+  src: url("./fonts/Maharlika-Regular.ttf")  format('truetype');
+}
+html{
+
+}
+body{
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  color: #282828;
+ 
+
+}
+h1{
+  font-family: "Maharlika", sans-serif;
+  font-weight: 300;
+  font-size: 2.3rem;
+  line-height: 1.3;
+
+}
+h2{
+  font-family: "Maharlika", sans-serif;
+  font-weight: 300;
+}
