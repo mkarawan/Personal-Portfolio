@@ -34,8 +34,7 @@ const Page: React.FC = () => {
       <section className="portfolio">
         <div className="portfolio-heading">
           <h1>
-            Explore My <br />
-            Recent Work
+            Explore My Recent Work
           </h1>
           <p>A collection of my best frontend projects.</p>
           <img src="/images/flowers.png" />
@@ -103,8 +102,6 @@ const Page: React.FC = () => {
           <h2>Email</h2>
           <p>monika.karawann@gmail.com</p>
         </div>
-      </section>
-      <section className="contact">
         <div>
           <img src="/images/phone.png" />
           <h2>Phone</h2>

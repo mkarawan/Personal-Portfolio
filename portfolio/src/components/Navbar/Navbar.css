@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     padding: 0 1rem;
+    z-index: 500000;
+    position: sticky;
 }
 .left{
     display: flex;
@@ -25,4 +27,9 @@
 }
 .navigation-mobile .right{
     text-align: right;
+}
+@media (min-width: 1024px){
+    .menu-elements{
+        padding-left: 7rem;
+    }
 }

@@ -1,6 +1,7 @@
 :root{
  --violet: #EBE0FF;
  --pink: #FAACC9;
+ --dark-pink: #885771;
 }
 
 @font-face {
@@ -27,4 +28,5 @@ h1{
 h2{
   font-family: "Maharlika", sans-serif;
   font-weight: 300;
+  color: var(--dark-pink);
 }

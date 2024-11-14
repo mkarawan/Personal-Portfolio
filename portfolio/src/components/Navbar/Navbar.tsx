@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="navbar">
-        {screenWidth >= 900 ? (
+        {screenWidth >= 1024 ? (
           <>
             <div className="menu-elements">
               <div className="left">
