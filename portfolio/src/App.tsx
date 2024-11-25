@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Page from './components/Page/Page';
+import './i18n';
+
 
 function App() {
   return (

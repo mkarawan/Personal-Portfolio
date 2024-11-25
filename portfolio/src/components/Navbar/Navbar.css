@@ -1,35 +1,116 @@
+.menu-elements {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 500000;
+  align-items: center;
+}
+.left {
+  display: flex;
+  gap: 80px;
+}
+.navbar {
+  top: 0;
+  position: sticky;
+  z-index: 500000;
+}
+.navbar p {
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar p:hover {
+  text-shadow: 0px 0px 30px 1px rgba(221, 206, 249, 0.9);
+}
+.open {
+  text-align: right;
+  padding: 1rem 1rem;
+}
+.close {
+  text-align: right;
+}
+.navigation-mobile {
+  padding: 1rem 1rem;
+  height: 100vh;
+}
+.navigation-mobile .left {
+  display: block;
+  text-align: right;
+}
+.navigation-mobile .left  p{
+    padding-bottom: 1.5rem;
+}
+.navigation-mobile .right {
+  text-align: right;
+  display: block;
+}
 
-.menu-elements{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    z-index: 500000;
-    position: sticky;
+@media (min-width: 1024px) {
+  .menu-elements {
+    padding-left: 7rem;
+  }
 }
-.left{
-    display: flex;
-    gap: 40px;
+.right {
+  display: flex;
+  gap: 10px;
 }
-.open{
-    text-align: right;
-    padding: 1rem 1rem;
+.flags img {
+  width: 25px;
+  cursor: pointer;
 }
-.close{
-    text-align: right;
+.flags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.navigation-mobile{
-    padding: 1rem 1rem;
-    height: 100vh;
+.navigation-mobile .flags{
+  display: inline-flex;
+  padding-top: 12rem;
 }
-.navigation-mobile .left{
-    display: block;
-    text-align: right;
+.scrolled {
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
 }
-.navigation-mobile .right{
-    text-align: right;
+
+a.nav-element {
+  text-decoration: none;
+  /* padding: 10px 20px; */
+  margin: 0 5px;
+  position: relative;
+  transition: all 0.5s ease;
 }
-@media (min-width: 1024px){
-    .menu-elements{
-        padding-left: 7rem;
-    }
+a.nav-element::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  clip: rect(0, 0, 0, 0);
+  transition: all 0.5s ease;
+}
+a.nav-element:hover {
+  color: #282828;
+  animation: neonFlicker 1.5s infinite alternate;
+}
+a.nav-element:hover::before {
+  visibility: visible;
+  clip: rect(0, 900px, 0, 0);
+  animation: neonFlicker 1.5s infinite alternate;
+}
+
+@keyframes neonFlicker {
+  0%,
+  100% {
+    text-shadow: 0 0 5px #e7b3ce, 0 0 10px #e7b3ce, 0 0 15px #e7b3ce,
+      0 0 20px #e7b3ce, 0 0 25px #e7b3ce, 0 0 30px #e7b3ce, 0 0 35px #e7b3ce;
+  }
+  50% {
+    text-shadow: 0 0 5px #e7b3ce, 0 0 10px #e7b3ce, 0 0 15px #e7b3ce,
+      0 0 20px #e7b3ce, 0 0 25px #e7b3ce, 0 0 30px #e7b3ce, 0 0 35px #e7b3ce,
+      0 0 40px #e7b3ce, 0 0 50px #e7b3ce, 0 0 75px #e7b3ce;
+  }
+}
+.flags img.inactive{
+  opacity: 50%;
 }

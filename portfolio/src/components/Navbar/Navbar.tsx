@@ -2,27 +2,48 @@ import React, { useEffect, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
 import { IconContext } from "react-icons";
-import { IoLogoFacebook } from "react-icons/io5";
+import { PiGithubLogoDuotone } from "react-icons/pi";
+import { PiLinkedinLogoDuotone } from "react-icons/pi";
+import { useTranslation } from "react-i18next";
 
 import "./Navbar.css";
 
 const Navbar: React.FC = () => {
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
   const [menuState, setMenuState] = useState<boolean>(false);
+  const { t, i18n } = useTranslation();
+  useEffect(() => {
+    const english = document.querySelector(".english");
+
+    english?.classList.add("inactive");
+  }, []);
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+  const handleChangePl = () => {
+    const polish = document.querySelector(".polish");
+    const english = document.querySelector(".english");
+
+    polish?.classList.remove("inactive");
+    english?.classList.add("inactive");
+    changeLanguage("pl");
+  };
+  const handleChangeEn = () => {
+    const polish = document.querySelector(".polish");
+    const english = document.querySelector(".english");
+    polish?.classList.add("inactive");
+    english?.classList.remove("inactive");
+    changeLanguage("en");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector(".navbar");
 
-      if (
-        window.scrollY >= 650
-        
-      ) {
+      if (window.scrollY >= 650) {
         navbar?.classList.add("scrolled");
-
       } else {
         navbar?.classList.remove("scrolled");
-
       }
     };
 
@@ -33,7 +54,6 @@ const Navbar: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   const clickMenu = () => {
     setMenuState(!menuState);
@@ -69,31 +89,53 @@ const Navbar: React.FC = () => {
           <>
             <div className="menu-elements">
               <div className="left">
-            
-                    <p onClick={() => setMenuState(false)}>
-                      <a className="about-us-nav">about</a>
-                    </p>
-                      <p onClick={() => setMenuState(false)}>
-                        <a>portfolio</a>
-                      </p>
-                      <p onClick={() => setMenuState(false)}>
-                        <a>contact</a>
-                      </p>
-              
-
+                <p onClick={() => setMenuState(false)}>
+                  <a className="nav-element">{t("about")}</a>
+                </p>
+                <p onClick={() => setMenuState(false)}>
+                  <a className="nav-element">portfolio</a>
+                </p>
+                <p onClick={() => setMenuState(false)}>
+                  <a className="nav-element">{t("contact")}</a>
+                </p>
               </div>
 
               <div className="right">
-                <IconContext.Provider
-                  value={{ color: "black", size: "25px" }}
-                >
-                  <a href="">
-                    <div>
-                      <IoLogoFacebook />
+                <a href="https://github.com/mkarawan" title="Github">
+                  <IconContext.Provider
+                    value={{ color: "#90D8F3", size: "35px" }}
+                  >
+                    <div className="close">
+                      <PiGithubLogoDuotone />
                     </div>
-                  </a>
-                </IconContext.Provider>
-              
+                  </IconContext.Provider>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mkarawan/"
+                  title="LinkedIn"
+                >
+                  <IconContext.Provider
+                    value={{ color: "#90D8F3", size: "35px" }}
+                  >
+                    <div className="close">
+                      <PiLinkedinLogoDuotone />
+                    </div>
+                  </IconContext.Provider>
+                </a>
+                <div className="flags">
+                  <img
+                    className="polish"
+                    title="PL"
+                    onClick={handleChangePl}
+                    src="/images/poland.png"
+                  />
+                  <img
+                    className="english"
+                    title="EN"
+                    onClick={handleChangeEn}
+                    src="/images/united-kingdom.png"
+                  />
+                </div>
               </div>
             </div>
           </>
@@ -101,7 +143,6 @@ const Navbar: React.FC = () => {
           <>
             {!menuState ? (
               <>
-               
                 <IconContext.Provider value={{ color: "black", size: "35px" }}>
                   <div className="open" onClick={clickMenu}>
                     <CgMenuRight />
@@ -120,32 +161,54 @@ const Navbar: React.FC = () => {
                   </IconContext.Provider>
 
                   <div className="left">
-            
-            <p onClick={() => setMenuState(false)}>
-              <a className="about-us-nav">about</a>
-            </p>
-              <p onClick={() => setMenuState(false)}>
-                <a>portfolio</a>
-              </p>
-              <p onClick={() => setMenuState(false)}>
-                <a>contact</a>
-              </p>
-      
+                    <p onClick={() => setMenuState(false)}>
+                      <a className="about-us-nav">{t("about")}</a>
+                    </p>
+                    <p onClick={() => setMenuState(false)}>
+                      <a>portfolio</a>
+                    </p>
+                    <p onClick={() => setMenuState(false)}>
+                      <a>{t("contact")}</a>
+                    </p>
+                  </div>
 
-      </div>
-
-      <div className="right">
-        <IconContext.Provider
-          value={{ color: "black", size: "25px" }}
-        >
-          <a href="">
-            <div>
-              <IoLogoFacebook />
-            </div>
-          </a>
-        </IconContext.Provider>
-      
-      </div>
+                  <div className="right">
+                    <a href="https://github.com/mkarawan" title="Github">
+                      <IconContext.Provider
+                        value={{ color: "#e7b3ce", size: "35px" }}
+                      >
+                        <div className="close">
+                          <PiGithubLogoDuotone />
+                        </div>
+                      </IconContext.Provider>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/mkarawan/"
+                      title="LinkedIn"
+                    >
+                      <IconContext.Provider
+                        value={{ color: "#e7b3ce", size: "35px" }}
+                      >
+                        <div className="close">
+                          <PiLinkedinLogoDuotone />
+                        </div>
+                      </IconContext.Provider>
+                    </a>
+                    <div className="flags">
+                      <img
+                        className="polish"
+                        title="PL"
+                        onClick={handleChangePl}
+                        src="/images/poland.png"
+                      />
+                      <img
+                        className="english"
+                        title="EN"
+                        onClick={handleChangeEn}
+                        src="/images/united-kingdom.png"
+                      />
+                    </div>
+                  </div>
                 </div>
               </>
             )}

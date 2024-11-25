@@ -1,7 +1,9 @@
 input[type="radio"] {
   display: none;
 }
-
+a{
+  text-decoration: none;
+}
 .card {
   position: absolute;
   width: 60%;
@@ -78,10 +80,10 @@ img.fintegrow {
 .website-description {
   background-color: #fff;
   border-radius: 8px;
-  min-width: 300px;
+  min-width: 350px;
   padding: 16px 10px;
-  height: 195px;
-  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  height: 265px;
+  box-shadow: 0px 0px 5px 0px rgba(144,216,243,1);
 }
 
 .upper-part {
@@ -92,9 +94,6 @@ img.fintegrow {
   height: 36px;
 }
 
-.play-icon {
-  margin-right: 10px;
-}
 
 .website-info {
   width: calc(100% - 32px);
@@ -121,7 +120,7 @@ img.fintegrow {
   width: 100%;
   position: absolute;
   top: 0;
-  left: 30px;
+  left: 18px;
   transition: transform 0.4s ease-in;
 }
 
@@ -130,7 +129,6 @@ img.fintegrow {
   height: 100vh;
   text-align: center;
   margin: 0 auto;
-  overflow-x: hidden;
   padding: 0;
 }
 .hero h1 {
@@ -169,6 +167,8 @@ img.fintegrow {
 .services {
   display: grid;
   gap: 50px;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 .services div {
   display: block;
@@ -297,8 +297,10 @@ img.fintegrow {
   padding-top: 130px;
 }
 section {
+  margin: 0 auto;
   margin: 3rem 0;
   padding: 0 1.3rem;
+
 }
 
 .contact img {
@@ -312,11 +314,24 @@ section {
 .contact h2 {
   margin: 0;
 }
-.contact-form {
+/* .contact-form {
   grid-template-columns: 1fr;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
+  background-color: #faf8fd;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+} */
+.contact-box{
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1600px;
+  box-sizing: border-box;
+}
+.contact-form {
+  margin: 0;
   background-color: #faf8fd;
   padding-top: 3rem;
   padding-bottom: 4rem;
@@ -348,7 +363,14 @@ textarea:focus {
   transition: background-color 0.2s ease;
   color: #c4abf3;
 }
+.form h1{
+  display: flex;
+  align-items: center;
+}
+.contact-icon{
+  padding-left: 10px;
 
+}
 .violet-btn {
   transition: background-color 0.2s ease;
   cursor: pointer;
@@ -369,10 +391,12 @@ textarea:focus {
   visibility: hidden;
   width: 1px;
 }
+
 textarea {
   height: 150px;
   border-radius: 25px;
 }
+
 
 footer {
   background-color: #f5ae81;
@@ -464,7 +488,7 @@ footer div {
     height: 700px;
   }
   .website-description {
-    height: 150px;
+    height: 200px;
   }
   .hero h1 {
     margin-top: 10rem;
@@ -523,7 +547,7 @@ footer div {
     grid-template-columns: repeat(3, 1fr);
     padding: 3rem 0 4rem 0;
   }
-  .contact-form {
+  .contact-box {
     grid-template-columns: 60% 40%;
     display: grid;
     align-items: center;
@@ -592,8 +616,10 @@ footer div {
   font-size: small;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  width: 60px;
+  width: 100px;
   background-color: #90d8f3;
+  position: fixed;
+  bottom: 43px;
 }
 .visit-btn:hover {
   background-color: #c7e9f7;
