@@ -9,7 +9,7 @@
   src: url("./fonts/Maharlika-Regular.ttf")  format('truetype');
 }
 html{
-
+scroll-behavior: smooth;
 }
 body{
   font-family: "Montserrat", sans-serif;

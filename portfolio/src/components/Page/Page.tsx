@@ -67,7 +67,7 @@ const Page: React.FC = () => {
         <h2>Web Developer</h2>
         <img className="pink" src="/images/pink-hero-cut.png" />
       </section>
-      <section className="about">
+      <section className="about" id="about">
         <h1>{t("about-h1")}</h1>
         <div className="services">
           <div>
@@ -87,7 +87,7 @@ const Page: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="portfolio">
+      <section className="portfolio" id="portfolio">
         <div className="portfolio-heading">
           <h1>{t("portfolio-h1")}</h1>
           <p> {t("portfolio-p")}</p>
@@ -251,7 +251,7 @@ const Page: React.FC = () => {
           <p>+48 532-328-386</p>
         </div>
       </section>
-      <section className="contact-form">
+      <section className="contact-form" id="contact">
         <div className="contact-box">
           <div className="form">
             <h1>

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
 import { IconContext } from "react-icons";
-import { PiGithubLogoDuotone } from "react-icons/pi";
-import { PiLinkedinLogoDuotone } from "react-icons/pi";
+import { PiGithubLogo } from "react-icons/pi";
+import { PiLinkedinLogo } from "react-icons/pi";
 import { useTranslation } from "react-i18next";
 
 import "./Navbar.css";
@@ -90,23 +90,23 @@ const Navbar: React.FC = () => {
             <div className="menu-elements">
               <div className="left">
                 <p onClick={() => setMenuState(false)}>
-                  <a className="nav-element">{t("about")}</a>
+                  <a href="#about" className="nav-element">{t("about")}</a>
                 </p>
                 <p onClick={() => setMenuState(false)}>
-                  <a className="nav-element">portfolio</a>
+                  <a href="#portfolio" className="nav-element">portfolio</a>
                 </p>
                 <p onClick={() => setMenuState(false)}>
-                  <a className="nav-element">{t("contact")}</a>
+                  <a href="#contact" className="nav-element">{t("contact")}</a>
                 </p>
               </div>
 
               <div className="right">
                 <a href="https://github.com/mkarawan" title="Github">
                   <IconContext.Provider
-                    value={{ color: "#90D8F3", size: "35px" }}
+                    value={{ color: "#90D8F3", size: "30px" }}
                   >
                     <div className="close">
-                      <PiGithubLogoDuotone />
+                      <PiGithubLogo />
                     </div>
                   </IconContext.Provider>
                 </a>
@@ -115,10 +115,10 @@ const Navbar: React.FC = () => {
                   title="LinkedIn"
                 >
                   <IconContext.Provider
-                    value={{ color: "#90D8F3", size: "35px" }}
+                    value={{ color: "#90D8F3", size: "30px" }}
                   >
                     <div className="close">
-                      <PiLinkedinLogoDuotone />
+                      <PiLinkedinLogo />
                     </div>
                   </IconContext.Provider>
                 </a>
@@ -162,13 +162,13 @@ const Navbar: React.FC = () => {
 
                   <div className="left">
                     <p onClick={() => setMenuState(false)}>
-                      <a className="about-us-nav">{t("about")}</a>
+                      <a  href="#about" className="about-us-nav">{t("about")}</a>
                     </p>
                     <p onClick={() => setMenuState(false)}>
-                      <a>portfolio</a>
+                      <a href="#portfolio" >portfolio</a>
                     </p>
                     <p onClick={() => setMenuState(false)}>
-                      <a>{t("contact")}</a>
+                      <a href="#contact" >{t("contact")}</a>
                     </p>
                   </div>
 
@@ -178,7 +178,7 @@ const Navbar: React.FC = () => {
                         value={{ color: "#e7b3ce", size: "35px" }}
                       >
                         <div className="close">
-                          <PiGithubLogoDuotone />
+                          <PiGithubLogo />
                         </div>
                       </IconContext.Provider>
                     </a>
@@ -190,7 +190,7 @@ const Navbar: React.FC = () => {
                         value={{ color: "#e7b3ce", size: "35px" }}
                       >
                         <div className="close">
-                          <PiLinkedinLogoDuotone />
+                          <PiLinkedinLogo />
                         </div>
                       </IconContext.Provider>
                     </a>
