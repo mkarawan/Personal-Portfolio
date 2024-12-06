@@ -128,12 +128,16 @@ const Navbar: React.FC = () => {
                     title="PL"
                     onClick={handleChangePl}
                     src="/images/poland.png"
+                    alt="polish-language"
+
                   />
                   <img
                     className="english"
                     title="EN"
                     onClick={handleChangeEn}
                     src="/images/united-kingdom.png"
+                    alt="english-language"
+
                   />
                 </div>
               </div>
@@ -200,12 +204,14 @@ const Navbar: React.FC = () => {
                         title="PL"
                         onClick={handleChangePl}
                         src="/images/poland.png"
+                        alt="polish-language"
                       />
                       <img
                         className="english"
                         title="EN"
                         onClick={handleChangeEn}
                         src="/images/united-kingdom.png"
+                        alt="english-language"
                       />
                     </div>
                   </div>

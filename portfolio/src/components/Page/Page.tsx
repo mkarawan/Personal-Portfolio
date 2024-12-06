@@ -61,27 +61,27 @@ const Page: React.FC = () => {
   return (
     <>
       <section className="hero">
-        <img className="orange" src="/images/orange-hero.png" />
+        <img className="orange" src="/images/orange-hero.png" alt="orange-shape" />
         <h1>{t("hello")}</h1>
         <p>{t("am")} Monika Karawan</p>
         <h2>Web Developer</h2>
-        <img className="pink" src="/images/pink-hero-cut.png" />
+        <img className="pink" src="/images/pink-hero-cut.png" alt="pink-shape"/>
       </section>
       <section className="about" id="about">
         <h1>{t("about-h1")}</h1>
         <div className="services">
           <div>
-            <img src="/images/services3.png" />{" "}
+            <img src="/images/services3.png" alt="service1" />{" "}
             <h2>{t("service1-h1")}</h2>
             <p>{t("service1-p")}</p>
           </div>
           <div>
-            <img src="/images/services2.png" />
+            <img src="/images/services2.png" alt="service2" />
             <h2>{t("service2-h1")}</h2>
             <p>{t("service2-p")}</p>
           </div>
           <div>
-            <img src="/images/services1.png" />
+            <img src="/images/services1.png" alt="service3" />
             <h2>{t("service3-h1")}</h2>
             <p>{t("service3-p")}</p>
           </div>
@@ -91,7 +91,7 @@ const Page: React.FC = () => {
         <div className="portfolio-heading">
           <h1>{t("portfolio-h1")}</h1>
           <p> {t("portfolio-p")}</p>
-          <img src="/images/flowers.png" />
+          <img src="/images/flowers.png" alt="flower"  />
         </div>
 
         <div className="container">
@@ -123,6 +123,7 @@ const Page: React.FC = () => {
                 className="website-img fintegrow"
                 src="/images/fintegro.png"
                 alt="PWA app"
+
               />
             </label>
             <label className="card" htmlFor="item-2" id="website-2">
@@ -184,69 +185,24 @@ const Page: React.FC = () => {
           </div>
         </div>
 
-        {/* <div className="portfolio-websites">
-          <div className="website">
-            <img />
-            <h2>Call time manager App</h2>
-            <p>A collection of my best frontend projects.</p>{" "}
-            <button>Visit</button>{" "}
-            <img className="wave" src="/images/wave.png" />
-          </div>
-          <div className="website">
-            <img />
-            <h2>Dwa Dęby website</h2>
-            <p>A collection of my best frontend projects.</p>{" "}
-            <button>Visit</button>{" "}
-            <img className="wave" src="/images/wave.png" />
-          </div>
-          <div className="website">
-            <img />
-            <h2>Green solutions website</h2>
-            <p>A collection of my best frontend projects.</p>{" "}
-            <button>Visit</button>{" "}
-            <img className="wave" src="/images/wave.png" />
-          </div>
-          <div className="website">
-            <img />
-            <h2>E-commerce website</h2>
-            <p>A collection of my best frontend projects.</p>{" "}
-            <button>Visit</button>{" "}
-            <img className="wave" src="/images/wave.png" />
-          </div>
-          <div className="website">
-            <img />
-            <h2>E-commerce website</h2>
-            <p>A collection of my best frontend projects.</p>{" "}
-            <button>Visit</button>{" "}
-            <img className="wave" src="/images/wave.png" />
-          </div>
-          <div className="website">
-            <img />
-            <h2>E-commerce website</h2>
-            <p>A collection of my best frontend projects.</p>{" "}
-            <button>Visit</button>
-            <img className="wave" src="/images/wave.png" />
-          </div>
-        </div> */}
 
-        {/* <button className="violet-btn download">Download my Resume</button> */}
       </section>
       <section className="build">
-        <img className="stripes" src="/images/stripes.png" />
+        <img className="stripes" src="/images/stripes.png" alt="stripes" />
         <div className="build-grid">
           <h1>{t("build-h1")}</h1>
           <p>{t("build-p")}</p>
-          <img src="/images/stars.png" />
+          <img src="/images/stars.png" alt="stars"/>
         </div>
       </section>
       <section className="contact">
         <div>
-          <img src="/images/email.png" />
+          <img src="/images/email.png" alt="email"/>
           <h2>Email</h2>
           <p>monika.karawann@gmail.com</p>
         </div>
         <div>
-          <img src="/images/phone.png" />
+          <img src="/images/phone.png" alt="phone"/>
           <h2>{t("phone")}</h2>
           <p>+48 532-328-386</p>
         </div>
@@ -297,49 +253,10 @@ const Page: React.FC = () => {
           </div>
           <div className="contact-img">
             {" "}
-            <img src="/images/mail.png" alt="Email photo" />
+            <img src="/images/mail.png" alt="Email" />
           </div>
         </div>
-        {/* <div className="form">
-          <div className="contact-img">
-            <h1>Contact me now</h1>
-            <img src="/images/mail.png" alt="Email photo" />
-          </div>
-        <div className="form-border">
-        <form ref={form} onSubmit={sendEmail}>
-            <p>Name</p>
-            <input
-              type="text"
-              name="user_name"
-              required
-              value={name}
-              onChange={handleNameChange}
-            ></input>
-            <p>Email</p>
-            <input
-              type="email"
-              name="user_email"
-              required
-              value={email}
-              onChange={handleEmailChange}
-            ></input>
-            <p>Message</p>
-            <textarea
-              placeholder="Write your message here"
-              name="message"
-              required
-              value={text}
-              onChange={handleTextChange}
-            ></textarea>
-            <button className="violet-btn" type="submit">
-              Send
-            </button>
-          </form>
-          {sent && <p>Message sent</p>}
-          {error && <p>Error</p>}
-        </div>
-       
-        </div> */}
+
       </section>
 
       <footer>
@@ -359,7 +276,7 @@ const Page: React.FC = () => {
               </div>
             </IconContext.Provider>
           </a>
-          <a href="" title="Download my resume">
+          <a href="https://i.etsystatic.com/29488153/r/il/e0f22b/3860244894/il_fullxfull.3860244894_p9az.jpg" title="Download my resume">
             <IconContext.Provider value={{ color: "#C85C19", size: "35px" }}>
               <div className="close">
                 <PiReadCvLogoDuotone />
