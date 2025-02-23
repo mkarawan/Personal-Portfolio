@@ -6,7 +6,7 @@ import { PiReadCvLogoDuotone } from "react-icons/pi";
 import { TbMessageHeart } from "react-icons/tb";
 import { PiLinkedinLogoDuotone } from "react-icons/pi";
 import { useTranslation } from "react-i18next";
-
+import "aos/dist/aos.css";
 import "./Page.css";
 
 const Page: React.FC = () => {
@@ -61,26 +61,95 @@ const Page: React.FC = () => {
   return (
     <>
       <section className="hero">
-        <img className="orange" src="/images/orange-hero.png" alt="orange-shape" />
-        <h1>{t("hello")}</h1>
-        <p>{t("am")} Monika Karawan</p>
-        <h2>Web Developer</h2>
-        <img className="pink" src="/images/pink-hero-cut.png" alt="pink-shape"/>
+        <img
+          data-aos-once="true"
+          data-aos-duration="800"
+          data-aos-easing="ease"
+          data-aos="fade-down-right"
+          className="orange"
+          src="/images/orange-hero.png"
+          alt="orange-shape"
+        />
+        <h1
+          data-aos-duration="800"
+          data-aos-once="true"
+          data-aos-easing="ease"
+          data-aos="fade-left"
+          data-aos-delay="400"
+        >
+          {t("hello")}
+        </h1>
+
+        <div>
+          <p
+            data-aos-once="true"
+            data-aos-duration="600"
+            data-aos-easing="ease"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            {t("am")} Monika Karawan
+          </p>
+          <h2
+            data-aos-once="true"
+            data-aos-duration="600"
+            data-aos-easing="ease"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            Web Developer
+          </h2>
+        </div>
+
+        <img
+          className="pink"
+          src="/images/pink-hero-cut.png"
+          alt="pink-shape"
+          data-aos-once="true"
+          data-aos-duration="800"
+          data-aos-easing="ease"
+          data-aos="fade-up-left"
+        />
       </section>
       <section className="about" id="about">
-        <h1>{t("about-h1")}</h1>
+        <h1
+          data-aos-once="true"
+          data-aos-duration="600"
+          data-aos-easing="ease"
+          data-aos="fade-up"
+        >
+          {t("about-h1")}
+        </h1>
         <div className="services">
-          <div>
+          <div
+            data-aos-once="true"
+            data-aos-duration="600"
+            data-aos-easing="ease"
+            data-aos-delay="400"
+            data-aos="fade-up"
+          >
             <img src="/images/services3.png" alt="service1" />{" "}
             <h2>{t("service1-h1")}</h2>
             <p>{t("service1-p")}</p>
           </div>
-          <div>
+          <div
+            data-aos-once="true"
+            data-aos-duration="600"
+            data-aos-easing="ease"
+            data-aos-delay="600"
+            data-aos="fade-up"
+          >
             <img src="/images/services2.png" alt="service2" />
             <h2>{t("service2-h1")}</h2>
             <p>{t("service2-p")}</p>
           </div>
-          <div>
+          <div
+            data-aos-once="true"
+            data-aos-duration="600"
+            data-aos-easing="ease"
+            data-aos-delay="800"
+            data-aos="fade-up"
+          >
             <img src="/images/services1.png" alt="service3" />
             <h2>{t("service3-h1")}</h2>
             <p>{t("service3-p")}</p>
@@ -88,13 +157,25 @@ const Page: React.FC = () => {
         </div>
       </section>
       <section className="portfolio" id="portfolio">
-        <div className="portfolio-heading">
+        <div
+          className="portfolio-heading"
+          data-aos-once="true"
+          data-aos-duration="600"
+          data-aos="fade-right"
+        >
           <h1>{t("portfolio-h1")}</h1>
           <p> {t("portfolio-p")}</p>
-          <img src="/images/flowers.png" alt="flower"  />
+          <img src="/images/flowers.png" alt="flower" />
         </div>
 
-        <div className="container">
+        <div
+          className="container"
+          data-aos-once="true"
+          data-aos-duration="500"
+          data-aos-easing="ease"
+          data-aos-delay="200"
+          data-aos="zoom-in"
+        >
           <input
             type="radio"
             name="slider"
@@ -123,7 +204,6 @@ const Page: React.FC = () => {
                 className="website-img fintegrow"
                 src="/images/fintegro.png"
                 alt="PWA app"
-
               />
             </label>
             <label className="card" htmlFor="item-2" id="website-2">
@@ -152,7 +232,9 @@ const Page: React.FC = () => {
                       <div className="subtitle">{t("web-info1")}</div>
                     </div>
                     <a href="https://minicrm.toadres.pl/">
-                      <button className="violet-btn visit-btn">{t("visit")}</button>
+                      <button className="violet-btn visit-btn">
+                        {t("visit")}
+                      </button>
                     </a>
                   </label>
                 )}
@@ -162,8 +244,10 @@ const Page: React.FC = () => {
                     <div className="sub-line">
                       <div className="subtitle">{t("web-info2")}</div>
                     </div>
-                    <a href="dwadęby.pl">
-                      <button className="violet-btn visit-btn">{t("visit")}</button>
+                    <a>
+                      <button className="violet-btn visit-btn grey-btn">
+                        {t("progress")}
+                      </button>
                     </a>
                   </label>
                 )}
@@ -184,25 +268,55 @@ const Page: React.FC = () => {
             </div>
           </div>
         </div>
-
-
       </section>
-      <section className="build">
+      <section
+        className="build"
+        data-aos-once="true"
+        data-aos-duration="600"
+        data-aos-easing="ease"
+        data-aos="fade-in"
+      >
         <img className="stripes" src="/images/stripes.png" alt="stripes" />
         <div className="build-grid">
-          <h1>{t("build-h1")}</h1>
-          <p>{t("build-p")}</p>
-          <img src="/images/stars.png" alt="stars"/>
+          <h1
+            data-aos-once="true"
+            data-aos-duration="500"
+            data-aos-easing="ease"
+            data-aos="fade-right"
+          >
+            {t("build-h1")}
+          </h1>
+          <p
+            data-aos-once="true"
+            data-aos-duration="500"
+            data-aos-easing="ease"
+            data-aos-delay="100"
+            data-aos="fade-right"
+          >
+            {t("build-p")}
+          </p>
+          <img src="/images/stars.png" alt="stars" />
         </div>
       </section>
       <section className="contact">
-        <div>
-          <img src="/images/email.png" alt="email"/>
+        <div
+          data-aos-once="true"
+          data-aos-duration="500"
+          data-aos-easing="ease"
+          data-aos="fade-down"
+        >
+          <img src="/images/email.png" alt="email" />
           <h2>Email</h2>
           <p>monika.karawann@gmail.com</p>
         </div>
-        <div>
-          <img src="/images/phone.png" alt="phone"/>
+        <div
+          data-aos-once="true"
+          data-aos-duration="500"
+          data-aos-easing="ease"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img src="/images/phone.png" alt="phone" />
           <h2>{t("phone")}</h2>
           <p>+48 532-328-386</p>
         </div>
@@ -210,7 +324,12 @@ const Page: React.FC = () => {
       <section className="contact-form" id="contact">
         <div className="contact-box">
           <div className="form">
-            <h1>
+            <h1
+              data-aos-once="true"
+              data-aos-duration="600"
+              data-aos-easing="ease"
+              data-aos="fade-right"
+            >
               {t("contact-h1")}
               <IconContext.Provider value={{ color: "#c5abf3", size: "45px" }}>
                 <div className="contact-icon">
@@ -219,7 +338,15 @@ const Page: React.FC = () => {
               </IconContext.Provider>
             </h1>
 
-            <form ref={form} onSubmit={sendEmail}>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              data-aos-once="true"
+              data-aos-duration="600"
+              data-aos-easing="ease"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
               <p>{t("name")}</p>
               <input
                 type="text"
@@ -253,10 +380,17 @@ const Page: React.FC = () => {
           </div>
           <div className="contact-img">
             {" "}
-            <img src="/images/mail.png" alt="Email" />
+            <img
+              src="/images/mail.png"
+              alt="Email"
+              data-aos-once="true"
+              data-aos-duration="600"
+              data-aos-easing="ease"
+              data-aos="zoom-in"
+              data-aos-delay="160"
+            />
           </div>
         </div>
-
       </section>
 
       <footer>
@@ -276,7 +410,11 @@ const Page: React.FC = () => {
               </div>
             </IconContext.Provider>
           </a>
-          <a href="https://i.etsystatic.com/29488153/r/il/e0f22b/3860244894/il_fullxfull.3860244894_p9az.jpg" title="Download my resume">
+          <a
+            href="/CV.pdf"
+            download="CV Monika Karawan"
+            title="Download my resume"
+          >
             <IconContext.Provider value={{ color: "#C85C19", size: "35px" }}>
               <div className="close">
                 <PiReadCvLogoDuotone />
