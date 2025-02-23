@@ -244,11 +244,11 @@ const Page: React.FC = () => {
                     <div className="sub-line">
                       <div className="subtitle">{t("web-info2")}</div>
                     </div>
-                    <a>
+                  
                       <button className="violet-btn visit-btn grey-btn">
                         {t("progress")}
                       </button>
-                    </a>
+                   
                   </label>
                 )}
                 {selectedItem === "item-3" && (
